@@ -9,12 +9,12 @@ class Students:
         self.roll_no=roll_no
 
     def cls_name(self):
-        return self.__class__.__name__
+        return self.__class__.__name__#it print the name of class to which it belongs
 
 class Toppers(Students):
     def __init__(self,name,roll_no,gold_medal=0):
         self.gold_medal=gold_medal
-        super().__init__()
+        super().__init__(name,roll_no)
         
 
 s1=Toppers("yahya",14)

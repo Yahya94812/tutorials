@@ -9,17 +9,21 @@ class Items:
         Items.all.append(self)
 
     def __repr__(self):#repr stand for "representing your objects"
-        return f"Items('{self.name}',{self.qt},{self.mrp})"    
+        return f"Items({self.name},{self.qt},{self.mrp})"    
     
     @classmethod
     def instentiate_from_csv(cls):
         with open ("data.csv","r") as f:
-            reader=csv.DictReader(f)#it read whole csv file and store it in multiple dictionary
+            reader=csv.DictReader(f)#it read whole csv file and store it in multiple dictionary and it is an itrator
+            
             items=list(reader)
+            
             for item in items:#items is a list of dictionary but item is a dictionary and get is used for accessing value from the key in dictionary
+                print(f"this  {item.get("name")}")
                 Items(
+                    
+                    qt=item.get("qt"),#if you use = the order is not important
                     name=item.get("name"),
-                    qt=item.get("qt"),
                     mrp=item.get("mrp")
                     )
  

@@ -1,10 +1,10 @@
-#all data types are instanse of classes like 'str','int','list' etc
+#variables are the reference of objects and objects actully store the values and these objects belongs to different class like int, float, list etc
 
 class Item:
     pass
 aitem=Item()
 aitem.name="yahya"
-print(type(aitem))#<class '__main__.Item'>
+print(type(aitem))#<class '__main__.Item'>#if the class is in diffrent file then [__main__] is replaced by the file name in wich class is defined with out [.py]
 print(type(aitem.name))#<class 'str'>
 
 print()
@@ -21,7 +21,7 @@ print(tp)
 print()
 
 class Products:
-    def __init__(self,rs:float,qt=1):#qt=1 is the default value if it is not pass as argument
+    def __init__(self,rs:float,qt=1):#qt=1 is the default value if it is not pass as argument and rs:float convert rs to float data type if possible
         self.rs=rs
         self.qt=qt
     def tprice(self):

@@ -7,13 +7,15 @@ class Items:
         Items.all.append(self)
 
     def __repr__(self):#repr stand for representing your objects
-        return f"Items('{self.name}',{self.qt},{self.mrp})"    
+        return f"Items('{self.name}',{self.qt},{self.mrp})"   #formatted string 
 
-    @classmethod
+    @classmethod #class methods modify class attributes etc at class level
     def hello(cls):
-        print("hello i am in class method")
+        print(f"all the object from class attributes are {cls.all}")
+
 
 item1=Items("cpu",1,1000)
+
 item2=Items("keys",3,100)
 print(Items.all)
 
